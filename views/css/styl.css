@@ -1,0 +1,37 @@
+body {
+    margin: 0; /* Resets the default margin */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    
+    background-image: url(views/BG.jpg); /* Your specified background image */
+    background-repeat: no-repeat; /* Prevents background from repeating */
+    background-size: cover; /* Covers the entire viewport without stretching */
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures content inside button is centered */
+    align-items: center; /* Ensures content inside button is centered */
+    padding: 20px;
+    background-color: #f3f7fe;
+    color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s; /* Smooth transition for all changes */
+    width: 20%;
+    min-width: 150px; /* Ensures a minimum width for smaller screens */
+    font-weight: 900;
+    font-size: large;
+    font-family: monospace; /* Font style for the button */
+    text-decoration: none; /* Removes default underline for anchor tag */
+    margin: 20px;
+}
+
+.btn:hover {
+    background-color: #a23bf6;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* Updated to RGBA for proper alpha */
+    color: #fff;
+}

@@ -1,0 +1,35 @@
+<% layout('layouts/bp')%>
+
+
+
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title"><%= file.subject%></h5>
+        <p class="card-text"><%= file.topic%></p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item text-muted"><%= file.contentType%></li>
+        <li class="list-group-item"><%= file.description%></li>
+        <li class="list-group-item"><%= file.file%></li>
+    </ul>
+    
+    <div class="card-body">
+        <form class="d-inline" action="/download/<%= file._id %>" >
+            <button class="btn btn-success">Download</button>
+        </form>
+        <!-- <a href="/download/<%= file._id %>">Download</a> -->
+        <form class="d-inline" action="/firstfiles_delete/<%=file._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+    
+    <div class="card-footer text-muted">
+        2 days ago
+    </div>
+</div>
+
+<!-- subject: String,
+    topic: String,
+    contentType:String,
+    description: String,
+    filePath: String -->

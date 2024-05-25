@@ -1,0 +1,18 @@
+<% layout('layouts/bp')%>
+
+    
+    <h1>All Files</h1>
+
+    <% for (let file of files) { %>
+        <div class="card">
+            <p><strong>Subject:</strong> <%= file.subject %></p>
+            <p><strong>Topic:</strong> <%= file.topic %></p>
+            <p><strong>Description:</strong> <%= file.description %></p>
+            <p><strong>File:</strong> <%= file.file.filename %></p>
+            
+            
+        </div>
+        <a class="btn btn-success" href="/download/<%= file._id %>">Download</a>
+        <a class="btn btn-primary" href="/firstshowFile/<%=file._id%>">View </a>
+        <hr>
+    <% } %>

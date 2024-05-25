@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #6441A5,#2a3da5); 
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(57, 57, 57, 0.489);
+    border-radius: 10px;
+    box-shadow: 25px 25px 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid transparent;
+    /* Initially no border */
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #130101;
+    border-radius: 10px;
+
+}
+
+h1 {
+
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;  
+    text-align: center;
+    margin-top: 0;
+    font-size: 50px;
+    font-weight: 900;
+    color: rgb(53, 53, 53);
+    text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #c9c9c9,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b9b9b9,
+                 0 5px 0 #aaa,
+                 0 6px 1px rgba(0,0,0,.1),
+                 0 0 5px rgba(0,0,0,.1),
+                 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2),
+                 0 5px 10px rgba(0,0,0,.25),
+                 0 10px 10px rgba(0,0,0,.2),
+                 0 20px 20px rgba(0,0,0,.15);
+}
+
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #130101;
+    border-radius: 2px;
+}
+
+#searchBtn {    
+    width: calc(20% - 20px);
+    box-sizing: border-box;
+    border: 2px solid #130101;
+    border-radius: 5px;
+    align-self: center;
+}
+#searchBtn:hover{
+    background-color: #2929291b;
+    transition: ease-in-out 0.25s;
+}   
+
+#sidebar,
+#dropdown,
+#right-content {
+    font-weight: 200;
+    background-color: #ffffff62;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    word-wrap: break-word;
+    /* Initially no border */
+}
+
+.bordered {
+    border: 2px solid #130101;
+    /* Add border when content is present */
+}
+
+.topic,
+.subtopic {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    /* background-color: #9e0000; */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+    border: 0.5px solid rgba(0, 0, 0, 0.541);
+}
+
+.topic:hover,
+.subtopic:hover {
+    background-color: #777;
+
+}
+
+#quizBtn {
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    background-color: #fffafafb;
+    font-weight: 600;
+}
+#quizBtn:hover{
+    background-color: #5d00544a;
+    transition: ease-in-out 0.25s;
+}
+.navbar-brand,
+.navbar-nav,
+.nav-link {
+    color: rgba(250, 235, 215, 0.421);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    #sidebar,
+    #dropdown,
+    #right-content {
+        width: 100%;
+    }
+}
+
