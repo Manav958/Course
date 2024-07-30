@@ -2,6 +2,15 @@ const express = require('express');
 const path = require('path');
 const http = require("http");
 const socketio = require("socket.io");
+
+if (process.env.NODE_ENV !== "production") {
+  require('dotenv').config();
+}
+
+API_KEY = process.env.CHATGPT
+console.log(API_KEY)
+
+
 const ejsMate = require('ejs-mate');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
@@ -12,9 +21,7 @@ const { Assignment, QuestionPaper, StudyMaterial } = require('./models/first_yea
 const { Readable } = require('stream');
 const first_year = require('./models/first_year');
 
-const dotenv = require('dotenv');
-dotenv.config();
-const API_KEY = process.env.CHATGPT;
+
 const pdfParse = require("pdf-parse");
 const { createWorker } = require("tesseract.js");
 const { fromPath } = require('pdf2pic');
@@ -217,6 +224,9 @@ app.delete('/firstfiles_delete/:id',async(req,res)=>{
 
 
 // HOME
+app.get('/api-key',(req,res)=>{
+  res.json({api:API_KEY});
+});
 
 app.get('/', (req, res) => {
     res.render('home');

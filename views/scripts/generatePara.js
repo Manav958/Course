@@ -2,13 +2,12 @@
 
 
 
-
 async function generateParagraph(content,subject) {
     try {
         const response = await fetch("https://api.openai.com/v1/chat/completions", {
             method: "POST",
             headers: {
-                Authorization:  `Bearer ${API_KEY}`,
+                Authorization:  `Bearer ${API}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({

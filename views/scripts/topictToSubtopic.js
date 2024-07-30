@@ -1,8 +1,25 @@
 
 
 
-//const API_KEY="Your KEY";
 
+async function getApiKey() {
+    try {
+      const response = await fetch('/api-key');
+      const data = await response.json();
+    // console.log (data)
+      return data;
+    } catch (error) {
+      console.error('Error fetching API key:', error);
+    }
+  }
+let API;
+
+getApiKey().then(apiKey => {
+    API = apiKey.api;
+    // console.log('API Key:', API);
+    
+    
+});
 
 async function subTopic(subject) {
     // Simulate fetching content for the sidebar entries
@@ -19,7 +36,7 @@ async function topicToSubtopic(subject) {
         const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
-            Authorization: `Bearer ${API_KEY}`,
+            Authorization: `Bearer ${API}`,
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
